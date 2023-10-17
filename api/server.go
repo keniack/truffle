@@ -7,6 +7,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"strconv"
 	"time"
 )
 
@@ -24,25 +25,26 @@ func StartServer() {
 
 func incoming() {
 	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
-
+		log.Printf("incoming started")
 		reqBody, _ := io.ReadAll(r.Body)
-
 		var message Message
-		err := json.Unmarshal(reqBody, &message)
+		s, _ := strconv.Unquote(string(reqBody))
+		err := json.Unmarshal([]byte(s), &message)
 		if err != nil {
 			log.Printf("Error parsing request body %s", err)
 		}
 		var start = time.Now()
 		for !ExistsAndHasPodIp(PodsMap, message.Target) {
-			log.Print("pod not found wait 10ms")
+			//log.Printf("incoming %s pod not found wait 10ms", message.Target)
 			time.Sleep(10 * time.Millisecond)
 			if start.Add(time.Second * 10).Before(time.Now()) {
 				break
 			}
 		}
-		pod := PodsMap[message.Target]
+		pod, _ := PodsMap.Load(message.Target)
 		resBody := client(reqBody, pod.PodIp, ":8080")
 		_, err = fmt.Fprintf(w, "Hello "+resBody)
+		log.Printf("incoming finished. response %s", resBody)
 		if err != nil {
 			return
 		}
@@ -51,24 +53,26 @@ func incoming() {
 
 func outgoing() {
 	http.HandleFunc("/outgoing", func(w http.ResponseWriter, r *http.Request) {
-
+		log.Printf("outgoing started")
 		reqBody, _ := io.ReadAll(r.Body)
 		var message Message
-		err := json.Unmarshal(reqBody, &message)
+		s, _ := strconv.Unquote(string(reqBody))
+		err := json.Unmarshal([]byte(s), &message)
 		if err != nil {
 			log.Printf("Error parsing request body %s", err)
 		}
 		var start = time.Now()
 		for !ExistsInMap(PodsMap, message.Target) {
-			log.Print("pod not found wait 10ms")
+			//log.Printf("outoing %s pod not found wait 10ms", message.Target)
 			time.Sleep(10 * time.Millisecond)
 			if start.Add(time.Second * 10).Before(time.Now()) {
 				break
 			}
 		}
-		pod := PodsMap[message.Target]
+		pod, _ := PodsMap.Load(message.Target)
 		resBody := client(reqBody, pod.NodeIP, ":8888/hello")
 		_, err = fmt.Fprintf(w, "Hello "+resBody)
+		log.Printf("outgoing finished. response %s", resBody)
 		if err != nil {
 			return
 		}
@@ -76,19 +80,21 @@ func outgoing() {
 }
 
 func client(data []byte, targetIp string, port string) string {
-	c := http.Client{Timeout: time.Duration(1) * time.Hour}
-	resp, err := c.Post("http://"+targetIp+port, "text/plain", bytes.NewBuffer(data))
-	if err != nil {
-		log.Printf("Error %s", err)
-		return ""
-	}
-
-	defer func(Body io.ReadCloser) {
-		err := Body.Close()
+	client := http.Client{Timeout: time.Duration(10) * time.Second}
+	req, _ := http.NewRequest("POST", "http://"+targetIp+port, bytes.NewBuffer(data))
+	req.Header.Add("Content-Type", "application/json")
+	log.Printf("started client")
+	for {
+		resp, err := client.Do(req)
 		if err != nil {
-
+			//fmt.Printf("error sending the first time: %v\n", err)
+			continue
 		}
-	}(resp.Body)
-	resBody, err := io.ReadAll(resp.Body)
-	return string(resBody)
+
+		defer func(Body io.ReadCloser) {
+			_ = Body.Close()
+		}(resp.Body)
+		resBody, err := io.ReadAll(resp.Body)
+		return string(resBody)
+	}
 }

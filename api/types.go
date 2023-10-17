@@ -19,7 +19,7 @@ type Event struct {
 	Timestamp time.Time
 }
 
-var PodsMap = make(map[string]Pod)
+var PodsMap = new(Map[string, Pod])
 var PodMetricsMap = make(map[string]PodMetrics)
 
 type PodMetrics struct {

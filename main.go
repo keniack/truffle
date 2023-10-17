@@ -12,6 +12,7 @@ import (
 	"os"
 	"path/filepath"
 	"polaris/truffle/api"
+	"strings"
 )
 
 // kubectl get pods
@@ -74,26 +75,24 @@ func main() {
 
 		var podMetric, _ = api.NewPodMetrics(pod, string(event.Type), string(pod.Status.Phase))
 
-		log.Printf("%s SchedulingTime %dms, PrepTime %dms, Running Time %dms\n",
-			podMetric.PodName, podMetric.GetSchedulingTime(), podMetric.GetPrepTime(), podMetric.GetRunningTime())
-
+		//log.Printf("%s SchedulingTime %dms, PrepTime %dms, Running Time %dms\n",
+		//	podMetric.PodName, podMetric.GetSchedulingTime(), podMetric.GetPrepTime(), podMetric.GetRunningTime())
+		//TODO introduce annotations and search by function annotation
+		podNameNormalized := strings.Split(pod.ObjectMeta.Name, "-000")[0]
 		switch {
 		case event.Type == watch.Modified && len(pod.Status.HostIP) > 0:
-			api.PodsMap[pod.ObjectMeta.Name] = api.Pod{
-				PodName:     pod.ObjectMeta.Name,
+			api.PodsMap.Store(podNameNormalized, api.Pod{
+				PodName:     podNameNormalized,
 				NodeName:    pod.Spec.NodeName,
 				NodeIP:      pod.Status.HostIP,
 				PodIp:       pod.Status.PodIP,
 				Annotations: pod.ObjectMeta.Annotations,
-			}
+			})
 		case event.Type == watch.Deleted || event.Type == watch.Error:
 			if podMetric.Exists() {
-				delete(api.PodMetricsMap, pod.ObjectMeta.Name)
+				delete(api.PodMetricsMap, podNameNormalized)
 			}
-			_, exists := api.PodsMap[pod.ObjectMeta.Name]
-			if exists {
-				delete(api.PodsMap, pod.ObjectMeta.Name)
-			}
+			api.PodsMap.LoadAndDelete(podNameNormalized)
 		}
 	}
 }
