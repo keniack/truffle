@@ -1,0 +1,12 @@
+start experiment for size file_1K.txt
+func-b-aws.txtEnd Duration: 5887 ms
+start experiment for size file_1M.txt
+func-b-aws.txtEnd Duration: 8223 ms
+start experiment for size file_2M.txt
+func-b-aws.txtEnd Duration: 10362 ms
+start experiment for size file_4M.txt
+func-b-aws.txtEnd Duration: 15203 ms
+start experiment for size file_10M.txt
+func-b-aws.txtEnd Duration: 33229 ms
+start experiment for size file_20M.txt
+func-b-aws.txtEnd Duration: 45046 ms

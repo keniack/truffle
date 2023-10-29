@@ -1,0 +1,12 @@
+start experiment for size file_1K.txt
+End Duration: 4078 ms
+start experiment for size file_1M.txt
+End Duration: 4519 ms
+start experiment for size file_2M.txt
+End Duration: 4394 ms
+start experiment for size file_4M.txt
+End Duration: 4607 ms
+start experiment for size file_10M.txt
+End Duration: 5362 ms
+start experiment for size file_20M.txt
+End Duration: 6324 ms
