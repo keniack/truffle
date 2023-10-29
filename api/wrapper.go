@@ -7,12 +7,13 @@ type Map[K comparable, V any] struct {
 }
 
 func (m *Map[K, V]) Delete(key K) { m.m.Delete(key) }
+
 func (m *Map[K, V]) Load(key K) (value V, ok bool) {
 	v, ok := m.m.Load(key)
 	if !ok {
 		return value, ok
 	}
-	return v.(V), ok
+	return v.(V), false
 }
 func (m *Map[K, V]) LoadAndDelete(key K) (value V, loaded bool) {
 	v, loaded := m.m.LoadAndDelete(key)

@@ -1,7 +1,7 @@
 package api
 
 import (
-	"encoding/json"
+	"log"
 	"time"
 )
 
@@ -19,17 +19,12 @@ type Event struct {
 	Timestamp time.Time
 }
 
+var Debug, Trace bool
+var InfoLog, DebugLog, ErrorLog, TraceLog *log.Logger
 var PodsMap = new(Map[string, Pod])
 var PodMetricsMap = make(map[string]PodMetrics)
 
 type PodMetrics struct {
 	PodName string
 	Events  []Event
-}
-
-type Message struct {
-	Source  string          `json:"source"`
-	Target  string          `json:"target"`
-	Content string          `json:"content"`
-	Context json.RawMessage `json:"context"` // RawMessage here! (not a string)
 }

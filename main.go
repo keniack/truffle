@@ -1,98 +1,67 @@
 package main
 
 import (
-	"context"
 	"flag"
-	v1 "k8s.io/api/core/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apimachinery/pkg/watch"
-	"k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/tools/clientcmd"
+	"github.com/gorilla/mux"
 	"log"
-	"os"
-	"path/filepath"
+	"net/http"
 	"polaris/truffle/api"
-	"strings"
 )
 
-// kubectl get pods
-func main() {
-	var ns, label, field string
+const IncomingPath = "/hello"
+const OutgoingPath = "/outgoing"
+
+var (
+	ns, label, field             string
+	incomingProxy, outgoingProxy bool
+)
+
+func init() {
+
 	flag.StringVar(&ns, "namespace", "", "namespace")
 	flag.StringVar(&label, "l", "", "Label selector")
 	flag.StringVar(&field, "f", "", "Field selector")
-	//start server
+	flag.BoolVar(&api.Debug, "debug", false, "Debug log level")
+	flag.BoolVar(&api.Trace, "trace", false, "Trace log level")
+	flag.BoolVar(&incomingProxy, "incoming-proxy", false, "Use reverse proxy for incoming requests")
+	flag.BoolVar(&outgoingProxy, "outgoing-proxy", false, "Use reverse proxy for outgoing requests")
+	flag.Parse()
+	if api.Trace {
+		api.Debug = true
+	}
+
+	logWriter := new(api.LogWriter)
+	api.InfoLog = log.New(logWriter, "[INFO] ", 0)
+	api.DebugLog = log.New(logWriter, "[DEBUG] ", 0)
+	api.TraceLog = log.New(logWriter, "[TRACE] ", 0)
+	api.ErrorLog = log.New(logWriter, "[ERROR] ", 0)
+
 	log.SetFlags(0)
-	log.SetOutput(new(api.LogWriter))
-	log.Printf("This is something being logged!")
-	go api.StartServer()
+	log.SetOutput(logWriter)
 
-	// Bootstrap k8s configuration from local 	Kubernetes config file
-	kubeconfig := filepath.Join(os.Getenv("HOME"), ".kube", "config")
-	log.Printf("Using kubeconfig file: ", kubeconfig)
-	config, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
+}
+
+// kubectl get pods
+func main() {
+	if api.Debug {
+		api.DebugLog.Printf("This is something the label set %s", label)
+	}
+
+	r := mux.NewRouter()
+	// Returns a proxy for the target url.
+	proxy, err := api.NewProxy("http://localhost:8080")
 	if err != nil {
-		log.Fatal(err)
+		panic(err)
 	}
-
-	// Create an rest client not targeting specific API version
-	clientset, err := kubernetes.NewForConfig(config)
+	if r.HandleFunc(IncomingPath, api.IncomingHandler()); incomingProxy {
+		r.HandleFunc(IncomingPath, api.ProxyIncomingHandler(proxy))
+	}
+	if r.HandleFunc(OutgoingPath, api.OutgoingHandler()); outgoingProxy {
+		r.HandleFunc(OutgoingPath, api.ProxyOutgoingHandler(proxy))
+	}
+	err = http.ListenAndServe(":8888", r)
 	if err != nil {
-		log.Fatal(err)
+		return
 	}
 
-	/*pods, err := clientset.CoreV1().Pods("").List(context.Background(), metav1.ListOptions{})
-	if err != nil {
-		log.Fatalln("failed to get pods:", err)
-	}
-
-	// print pods
-	for i, pod := range pods.Items {
-		fmt.Printf("[%d] %s\n", i, pod.GetName())
-	}
-	*/
-
-	ctx, cancel := context.WithCancel(context.Background())
-	defer cancel()
-	// initial list
-	listOptions := metav1.ListOptions{LabelSelector: label, FieldSelector: field}
-
-	// watch future changes to Pods
-	watcher, err := clientset.CoreV1().Pods(ns).Watch(ctx, listOptions)
-	if err != nil {
-		log.Fatal(err)
-	}
-	ch := watcher.ResultChan()
-
-	log.Printf("--- POD Watch (namespace %v) ----\n", ns)
-	for event := range ch {
-		pod, ok := event.Object.(*v1.Pod)
-		if !ok {
-			log.Fatal("unexpected type")
-		}
-		log.Printf("Event [%s] PodName [%s] Status [%s] NodeName [%s] HostIP [%s] PodIp [%s]\n",
-			event.Type, pod.ObjectMeta.Name, pod.Status.Phase, pod.Spec.NodeName, pod.Status.HostIP, pod.Status.PodIPs)
-
-		var podMetric, _ = api.NewPodMetrics(pod, string(event.Type), string(pod.Status.Phase))
-
-		//log.Printf("%s SchedulingTime %dms, PrepTime %dms, Running Time %dms\n",
-		//	podMetric.PodName, podMetric.GetSchedulingTime(), podMetric.GetPrepTime(), podMetric.GetRunningTime())
-		//TODO introduce annotations and search by function annotation
-		podNameNormalized := strings.Split(pod.ObjectMeta.Name, "-000")[0]
-		switch {
-		case event.Type == watch.Modified && len(pod.Status.HostIP) > 0:
-			api.PodsMap.Store(podNameNormalized, api.Pod{
-				PodName:     podNameNormalized,
-				NodeName:    pod.Spec.NodeName,
-				NodeIP:      pod.Status.HostIP,
-				PodIp:       pod.Status.PodIP,
-				Annotations: pod.ObjectMeta.Annotations,
-			})
-		case event.Type == watch.Deleted || event.Type == watch.Error:
-			if podMetric.Exists() {
-				delete(api.PodMetricsMap, podNameNormalized)
-			}
-			api.PodsMap.LoadAndDelete(podNameNormalized)
-		}
-	}
 }
