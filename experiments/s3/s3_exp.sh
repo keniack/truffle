@@ -6,15 +6,19 @@ my_files=("file_1K.txt" "file_1M.txt" "file_2M.txt" "file_4M.txt" "file_10M.txt"
 
 set -e
 
+invocations=$1
 
 for file in "${my_files[@]}"; do
-   echo "start experiment for size $file"
-   start=$(date +%s%N)
-   curl -s --trace-time "http://10.152.183.128" -H "Host: func-a-s3.default.svc.cluster.local" -d @storage/$file
-   target_fn_result=$(curl -s --trace-time "http://10.152.183.128" -H "Host: func-b-s3.default.svc.cluster.local")
-   #end=$(date +%s% N)
-   end=$(date -d "$target_fn_result" +%s%N)
-   echo "End Duration: $(($(($end-$start))/1000000)) ms"
+
+   for i in {1..10}; do
+     echo "start experiment for size $file in $i"
+     start=$(date +%s%N)
+     curl -s --trace-time "http://10.152.183.128" -H "Host: func-a-s3.default.svc.cluster.local" -d @storage/$file &
+     target_fn_result=$(curl -s --trace-time "http://10.152.183.128" -H "Host: func-b-s3.default.svc.cluster.local")
+     #end=$(date +%s% N)
+     end=$(date -d "$target_fn_result" +%s%N)
+     echo "End Duration: $(($(($end-$start))/1000000)) ms"
+   done
    # Sleep while function is running
    is_running=true
    while "$is_running"; do

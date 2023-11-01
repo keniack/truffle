@@ -1,26 +1,29 @@
 start experiment for size file_1K.txt
-End Duration: 4315 ms
-start experiment for size file_1M.txt
-End Duration: 4139 ms
-start experiment for size file_2M.txt
-End Duration: 3932 ms
-start experiment for size file_4M.txt
-End Duration: 5042 ms
-start experiment for size file_10M.txt
-End Duration: 6655 ms
-start experiment for size file_20M.txt
-End Duration: 10700 ms
-
-proxy
-start experiment for size file_1K.txt
-End Duration: 4196 ms
+End Duration: 3960 ms
 start experiment for size file_1M.txt
 End Duration: 3936 ms
 start experiment for size file_2M.txt
+End Duration: 3946 ms
+start experiment for size file_4M.txt
+End Duration: 4167 ms
+start experiment for size file_10M.txt
+End Duration: 4566 ms
+start experiment for size file_20M.txt
+End Duration: 4897 ms
+start experiment for size file_40M.txt
+End Duration: 6016 ms
+
+start experiment for size file_1K.txt
+End Duration: 3972 ms
+start experiment for size file_1M.txt
+End Duration: 3918 ms
+start experiment for size file_2M.txt
 End Duration: 4160 ms
 start experiment for size file_4M.txt
-End Duration: 4342 ms
+End Duration: 4135 ms
 start experiment for size file_10M.txt
-End Duration: 7051 ms
+End Duration: 4601 ms
 start experiment for size file_20M.txt
-End Duration: 11584 ms
+End Duration: 5061 ms
+start experiment for size file_40M.txt
+End Duration: 5999 ms

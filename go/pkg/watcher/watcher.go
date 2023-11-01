@@ -1,4 +1,4 @@
-package api
+package watcher
 
 import (
 	"context"
@@ -10,7 +10,9 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"polaris/truffle/pkg/common"
 	"strings"
+	"sync"
 )
 
 func WatcherClient() *kubernetes.Clientset {
@@ -26,10 +28,13 @@ func WatcherClient() *kubernetes.Clientset {
 	return clientset
 }
 
-func GetPodIpForName(target string) string {
-
+func GetPodIpForName(target string, podIpChannel chan<- string, wg *sync.WaitGroup) {
+	if common.Debug {
+		common.DebugLog.Printf("starting watcher")
+	}
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
+	defer wg.Done()
 	// initial list
 	listOptions := metav1.ListOptions{LabelSelector: "", FieldSelector: ""}
 
@@ -39,27 +44,38 @@ func GetPodIpForName(target string) string {
 		log.Fatal(err)
 	}
 	ch := watcher.ResultChan()
+out:
 	for event := range ch {
 		pod, _ := event.Object.(*v1.Pod)
-		if Trace {
-			TraceLog.Printf("Event [%s] PodName [%s] Status [%s] NodeName [%s] HostIP [%s] PodIp [%s]\n",
+		if common.Trace {
+			common.TraceLog.Printf("Event [%s] PodName [%s] Status [%s] NodeName [%s] HostIP [%s] PodIp [%s]\n",
 				event.Type, pod.ObjectMeta.Name, pod.Status.Phase, pod.Spec.NodeName, pod.Status.HostIP, pod.Status.PodIPs)
 		}
 		switch {
 		case (event.Type == watch.Modified || event.Type == watch.Added) && strings.HasPrefix(pod.ObjectMeta.Name, target) && len(pod.Status.PodIP) > 0:
 			{
-				return pod.Status.PodIP
+				if common.Debug {
+					common.DebugLog.Println("Adding podIp to channel")
+				}
+				podIpChannel <- pod.Status.PodIP
+				break out
 
 			}
 		}
-
 	}
-	return ""
+	if common.Debug {
+		common.DebugLog.Println("Finished watcher")
+	}
+
 }
 
-func GetNodeIpForName(target string) string {
+func GetNodeIpForName(target string, nodeIpChannel chan<- string, wg *sync.WaitGroup) {
+	if common.Debug {
+		common.DebugLog.Printf("starting watcher")
+	}
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
+	defer wg.Done()
 	// initial list
 	listOptions := metav1.ListOptions{LabelSelector: "", FieldSelector: ""}
 
@@ -70,19 +86,26 @@ func GetNodeIpForName(target string) string {
 	}
 	ch := watcher.ResultChan()
 
+out:
 	for event := range ch {
 		pod, _ := event.Object.(*v1.Pod)
-		if Trace {
-			TraceLog.Printf("Event [%s] PodName [%s] Status [%s] NodeName [%s] HostIP [%s] PodIp [%s]\n",
+		if common.Trace {
+			common.TraceLog.Printf("Event [%s] PodName [%s] Status [%s] NodeName [%s] HostIP [%s] PodIp [%s]\n",
 				event.Type, pod.ObjectMeta.Name, pod.Status.Phase, pod.Spec.NodeName, pod.Status.HostIP, pod.Status.PodIPs)
 		}
 		switch {
 		case (event.Type == watch.Modified || event.Type == watch.Added) && strings.HasPrefix(pod.ObjectMeta.Name, target) && len(pod.Status.HostIP) > 0:
 			{
-				return pod.Status.HostIP
+				if common.Debug {
+					common.DebugLog.Println("Adding nodeIp to channel")
+				}
+				nodeIpChannel <- pod.Status.HostIP
+				break out
 			}
 		}
-
 	}
-	return ""
+	if common.Debug {
+		common.DebugLog.Println("Finished watcher")
+	}
+
 }

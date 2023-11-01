@@ -8,7 +8,7 @@ VERSION := 0.0.1
 .PHONY: build
 build: clean
 	@echo "Building $(APP_NAME)..."
-	@go build -o bin/$(APP_NAME)
+	@go build -o bin/$(APP_NAME) cmd/main.go
 
 .PHONY: clean
 clean:

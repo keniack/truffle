@@ -1,7 +1,8 @@
-package api
+package metrics
 
 import (
 	v1 "k8s.io/api/core/v1"
+	"polaris/truffle/pkg/common"
 	"strings"
 	"time"
 )
@@ -18,42 +19,42 @@ import (
 
 */
 
-func NewPodMetrics(podK8s *v1.Pod, typeEvent string, phase string) (*PodMetrics, error) {
-	podT := Pod{
+func NewPodMetrics(podK8s *v1.Pod, typeEvent string, phase string) (*common.PodMetrics, error) {
+	podT := common.Pod{
 		PodName:  podK8s.ObjectMeta.Name,
 		NodeName: podK8s.Spec.NodeName,
 		NodeIP:   podK8s.Status.HostIP,
 		PodIp:    podK8s.Status.PodIP,
 	}
-	metricEvent := Event{
+	metricEvent := common.Event{
 		Type:      typeEvent,
 		Pod:       podT,
 		Phase:     phase,
 		Timestamp: time.Now(),
 	}
 
-	podMetric, exists := PodMetricsMap[podK8s.ObjectMeta.Name]
+	podMetric, exists := common.PodMetricsMap[podK8s.ObjectMeta.Name]
 	if !exists {
-		podMetric = PodMetrics{
+		podMetric = common.PodMetrics{
 			PodName: podK8s.ObjectMeta.Name,
 		}
 	}
 	podMetric.Events = append(podMetric.Events, metricEvent)
-	PodMetricsMap[podK8s.ObjectMeta.Name] = podMetric
+	common.PodMetricsMap[podK8s.ObjectMeta.Name] = podMetric
 	return &podMetric, nil
 }
 
-func (p *PodMetrics) Exists() bool {
-	_, exists := PodMetricsMap[p.PodName]
+func (p *pkg.PodMetrics) Exists() bool {
+	_, exists := common.PodMetricsMap[p.PodName]
 	return exists
 }
 
-func (p *PodMetrics) GetSchedulingTime() int {
+func (p *pkg.PodMetrics) GetSchedulingTime() int {
 
 	if len(p.Events) == 0 {
 		return 0
 	}
-	var schedulingEvent []Event
+	var schedulingEvent []common.Event
 	for _, event := range p.Events {
 		if !strings.EqualFold(event.Phase, "Pending") {
 			continue
@@ -77,12 +78,12 @@ func (p *PodMetrics) GetSchedulingTime() int {
 	return int(duration.Milliseconds())
 }
 
-func (p *PodMetrics) GetPrepTime() int {
+func (p *pkg.PodMetrics) GetPrepTime() int {
 
 	if len(p.Events) == 0 {
 		return 0
 	}
-	var events []Event
+	var events []common.Event
 	for _, event := range p.Events {
 		if !strings.EqualFold(event.Type, "MODIFIED") ||
 			len(event.Pod.NodeName) == 0 {
@@ -105,12 +106,12 @@ func (p *PodMetrics) GetPrepTime() int {
 	return int(duration.Milliseconds())
 }
 
-func (p *PodMetrics) GetRunningTime() int {
+func (p *pkg.PodMetrics) GetRunningTime() int {
 
 	if len(p.Events) == 0 {
 		return 0
 	}
-	var events []Event
+	var events []common.Event
 	for _, event := range p.Events {
 		if strings.EqualFold(event.Type, "DELETED") || len(event.Pod.NodeName) == 0 {
 			continue

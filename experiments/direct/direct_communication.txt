@@ -10,3 +10,5 @@ start experiment for size file_10M.txt
 End Duration: 5362 ms
 start experiment for size file_20M.txt
 End Duration: 6324 ms
+start experiment for size file_40M.txt
+End Duration: 7372 ms

@@ -1,4 +1,4 @@
-package api
+package common
 
 import (
 	"log"
@@ -19,9 +19,15 @@ type Event struct {
 	Timestamp time.Time
 }
 
+var RedisIP string
+var AwsAccessKey string
+var AwsSecretKey string
+var ComMode string
+var IncomingPodPort string
 var Debug, Trace bool
 var InfoLog, DebugLog, ErrorLog, TraceLog *log.Logger
-var PodsMap = new(Map[string, Pod])
+
+// var PodsMap = new(utils.Map[string, Pod])
 var PodMetricsMap = make(map[string]PodMetrics)
 
 type PodMetrics struct {
