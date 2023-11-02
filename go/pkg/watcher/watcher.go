@@ -93,6 +93,7 @@ out:
 			common.TraceLog.Printf("Event [%s] PodName [%s] Status [%s] NodeName [%s] HostIP [%s] PodIp [%s]\n",
 				event.Type, pod.ObjectMeta.Name, pod.Status.Phase, pod.Spec.NodeName, pod.Status.HostIP, pod.Status.PodIPs)
 		}
+
 		switch {
 		case (event.Type == watch.Modified || event.Type == watch.Added) && strings.HasPrefix(pod.ObjectMeta.Name, target) && len(pod.Status.HostIP) > 0:
 			{

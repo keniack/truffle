@@ -8,6 +8,7 @@ import (
 	"polaris/truffle/pkg/client"
 	"polaris/truffle/pkg/common"
 	"polaris/truffle/pkg/watcher"
+	"strconv"
 	"sync"
 )
 
@@ -18,6 +19,7 @@ func OutgoingHandler() func(http.ResponseWriter, *http.Request) {
 		}
 		target := r.Header.Get("x-target")
 		contentLengthStr := r.Header.Get("Content-Length")
+		contentLength, _ := strconv.Atoi(contentLengthStr)
 		if common.Debug {
 			common.DebugLog.Printf("outgoing target %s", target)
 			common.DebugLog.Printf("Comm Mode %s outgoing content length %s", common.ComMode, contentLengthStr)
@@ -28,7 +30,7 @@ func OutgoingHandler() func(http.ResponseWriter, *http.Request) {
 		var wg sync.WaitGroup
 		wg.Add(2)
 		//buf := *bytes.NewBuffer(make([]byte, 0, contentLength))
-		go client.SetContentOutgoing(r.Body, contentChannel, &wg)
+		go client.SetContentOutgoing(r.Body, contentChannel, contentLength, &wg)
 		go watcher.GetNodeIpForName(target, nodeIpChannel, &wg)
 		buf := <-contentChannel
 		nodeIp := <-nodeIpChannel

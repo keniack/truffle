@@ -2,12 +2,17 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"github.com/gorilla/mux"
+	"github.com/redis/go-redis/v9"
 	"log"
 	"net/http"
+	"polaris/truffle/pkg/client"
 	"polaris/truffle/pkg/common"
+	"polaris/truffle/pkg/metrics"
 	"polaris/truffle/pkg/server"
 	"polaris/truffle/pkg/utils"
+	"time"
 )
 
 const IncomingPath = "/hello"
@@ -30,18 +35,24 @@ func init() {
 	flag.StringVar(&common.AwsSecretKey, "secret-key", "", "AWS secret key")
 	flag.StringVar(&common.ComMode, "comm-mode", "BUFFER", "Communication mode: BUFFER S3 KVS")
 	flag.StringVar(&common.RedisIP, "redis-ip", "localhost", "Redis IP")
+	flag.StringVar(&common.RedisPwd, "redis-pwd", "", "Redis Password")
 	flag.BoolVar(&incomingProxy, "incoming-proxy", false, "Use reverse proxy for incoming requests")
 	flag.BoolVar(&outgoingProxy, "outgoing-proxy", false, "Use reverse proxy for outgoing requests")
 	flag.Parse()
+	client.Pool = redis.NewClient(&redis.Options{
+		Addr:         fmt.Sprintf("%s:6379", common.RedisIP),
+		Password:     common.RedisPwd, // no password set
+		DB:           0,               // use default DB
+		ReadTimeout:  time.Minute,
+		WriteTimeout: time.Minute,
+	})
 	if common.Trace {
 		common.Debug = true
 	}
 
 	logWriter := new(utils.LogWriter)
-	common.InfoLog = log.New(logWriter, "[INFO] ", 0)
 	common.DebugLog = log.New(logWriter, "[DEBUG] ", 0)
 	common.TraceLog = log.New(logWriter, "[TRACE] ", 0)
-	common.ErrorLog = log.New(logWriter, "[ERROR] ", 0)
 
 	log.SetFlags(0)
 	log.SetOutput(logWriter)
@@ -52,7 +63,7 @@ func main() {
 	if common.Debug {
 		common.DebugLog.Printf("This is something the label set %s", label)
 	}
-
+	go metrics.StartPodMetrics()
 	r := mux.NewRouter()
 	// Returns a proxy for the target url.
 	proxy, err := server.NewProxy("http://localhost:8080")

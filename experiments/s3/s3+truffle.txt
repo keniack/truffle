@@ -1,152 +1,123 @@
-start experiment for size file_1K.txt index 1
-End Duration: 5307 ms
-start experiment for size file_1K.txt index 2
-End Duration: 5354 ms
 start experiment for size file_1K.txt index 3
-End Duration: 5443 ms
+End Duration: 5143 ms
 start experiment for size file_1K.txt index 4
-End Duration: 5270 ms
+End Duration: 4867 ms
 start experiment for size file_1K.txt index 5
-End Duration: 5354 ms
+End Duration: 5000 ms
 start experiment for size file_1K.txt index 6
-End Duration: 5330 ms
+End Duration: 4940 ms
 start experiment for size file_1K.txt index 7
-End Duration: 5358 ms
+End Duration: 5050 ms
 start experiment for size file_1K.txt index 8
-End Duration: 5512 ms
+End Duration: 5000 ms
 start experiment for size file_1K.txt index 9
-End Duration: 5165 ms
+End Duration: 4873 ms
 start experiment for size file_1K.txt index 10
-End Duration: 5377 ms
-Avg time for file_1K.txt: 5347 ms
+End Duration: 4954 ms
+Avg time for file_1K.txt: 4978
 start experiment for size file_1M.txt index 1
-End Duration: 6100 ms
+End Duration: 4969 ms
 start experiment for size file_1M.txt index 2
-End Duration: 5496 ms
+End Duration: 5079 ms
 start experiment for size file_1M.txt index 3
-End Duration: 5885 ms
+End Duration: 5029 ms
 start experiment for size file_1M.txt index 4
-End Duration: 5602 ms
+End Duration: 4960 ms
 start experiment for size file_1M.txt index 5
-End Duration: 5564 ms
+End Duration: 5041 ms
 start experiment for size file_1M.txt index 6
-End Duration: 5455 ms
+End Duration: 4995 ms
 start experiment for size file_1M.txt index 7
-End Duration: 5764 ms
+End Duration: 4918 ms
 start experiment for size file_1M.txt index 8
-End Duration: 5693 ms
+End Duration: 5007 ms
 start experiment for size file_1M.txt index 9
-End Duration: 5559 ms
+End Duration: 4984 ms
 start experiment for size file_1M.txt index 10
-End Duration: 5333 ms
-Avg time for file_1M.txt: 5645
-
+End Duration: 5001 ms
+Avg time for file_1M.txt: 4998
 start experiment for size file_2M.txt index 1
-End Duration: 5570 ms
+End Duration: 5103 ms
 start experiment for size file_2M.txt index 2
-End Duration: 5639 ms
+End Duration: 5310 ms
 start experiment for size file_2M.txt index 3
-End Duration: 5554 ms
+End Duration: 4872 ms
 start experiment for size file_2M.txt index 4
-End Duration: 5646 ms
+End Duration: 5048 ms
 start experiment for size file_2M.txt index 5
-End Duration: 5449 ms
+End Duration: 4984 ms
 start experiment for size file_2M.txt index 6
-End Duration: 5552 ms
+End Duration: 4972 ms
 start experiment for size file_2M.txt index 7
-End Duration: 5634 ms
+End Duration: 5154 ms
 start experiment for size file_2M.txt index 8
-End Duration: 5756 ms
+End Duration: 5092 ms
 start experiment for size file_2M.txt index 9
-End Duration: 5620 ms
+End Duration: 5013 ms
 start experiment for size file_2M.txt index 10
-End Duration: 5576 ms
-Avg time for file_2M.txt: 5599
-
-
-start experiment for size file_4M.txt index 1
-End Duration: 5727 ms
-start experiment for size file_4M.txt index 2
-End Duration: 5689 ms
+End Duration: 5011 ms
+Avg time for file_2M.txt: 5055
 start experiment for size file_4M.txt index 3
-End Duration: 5864 ms
+End Duration: 5194 ms
 start experiment for size file_4M.txt index 4
-End Duration: 5645 ms
+End Duration: 5119 ms
 start experiment for size file_4M.txt index 5
-End Duration: 5700 ms
+End Duration: 5069 ms
 start experiment for size file_4M.txt index 6
-End Duration: 5681 ms
+End Duration: 5138 ms
 start experiment for size file_4M.txt index 7
-End Duration: 5631 ms
+End Duration: 5088 ms
 start experiment for size file_4M.txt index 8
-End Duration: 5665 ms
+End Duration: 5144 ms
 start experiment for size file_4M.txt index 9
-End Duration: 5636 ms
+End Duration: 5051 ms
 start experiment for size file_4M.txt index 10
-End Duration: 5761 ms
-Avg time for file_4M.txt: 5699
+End Duration: 5187 ms
+Avg time for file_4M.txt: 5126
+
 start experiment for size file_10M.txt index 1
-End Duration: 7304 ms
+End Duration: 5540 ms
 start experiment for size file_10M.txt index 2
-End Duration: 6410 ms
+End Duration: 5688 ms
 start experiment for size file_10M.txt index 3
-End Duration: 6223 ms
+End Duration: 5333 ms
 start experiment for size file_10M.txt index 4
-End Duration: 6660 ms
+End Duration: 5255 ms
 start experiment for size file_10M.txt index 5
-End Duration: 6571 ms
+End Duration: 5244 ms
 start experiment for size file_10M.txt index 6
-End Duration: 6388 ms
+End Duration: 5299 ms
 start experiment for size file_10M.txt index 7
-End Duration: 6761 ms
+End Duration: 5312 ms
 start experiment for size file_10M.txt index 8
-End Duration: 6300 ms
+End Duration: 5362 ms
 start experiment for size file_10M.txt index 9
-End Duration: 7099 ms
+End Duration: 5484 ms
 start experiment for size file_10M.txt index 10
-End Duration: 7144 ms
-Avg time for file_10M.txt: 6686
+End Duration: 5331 ms
+Avg time for file_10M.txt: 5384
 
-start experiment for size file_20M.txt index 1
-End Duration: 6738 ms
-start experiment for size file_20M.txt index 2
-End Duration: 6938 ms
-start experiment for size file_20M.txt index 3
-End Duration: 7267 ms
-start experiment for size file_20M.txt index 4
-End Duration: 6925 ms
-start experiment for size file_20M.txt index 5
-End Duration: 6808 ms
-start experiment for size file_20M.txt index 6
-End Duration: 6958 ms
-start experiment for size file_20M.txt index 7
-End Duration: 6909 ms
-start experiment for size file_20M.txt index 8
-End Duration: 7395 ms
-start experiment for size file_20M.txt index 9
-End Duration: 6833 ms
-start experiment for size file_20M.txt index 10
-End Duration: 6823 ms
-Avg time for file_20M.txt: 6959
 
+
+Avg time for file_20M.txt: 5694
 start experiment for size file_40M.txt index 1
-End Duration: 8289 ms
+End Duration: 7550 ms
 start experiment for size file_40M.txt index 2
-End Duration: 9091 ms
+End Duration: 7189 ms
 start experiment for size file_40M.txt index 3
-End Duration: 8308 ms
+End Duration: 7207 ms
 start experiment for size file_40M.txt index 4
-End Duration: 8447 ms
+End Duration: 7118 ms
 start experiment for size file_40M.txt index 5
-End Duration: 8525 ms
+End Duration: 7160 ms
 start experiment for size file_40M.txt index 6
-End Duration: 8590 ms
+End Duration: 6867 ms
 start experiment for size file_40M.txt index 7
-End Duration: 8653 ms
+End Duration: 6817 ms
 start experiment for size file_40M.txt index 8
-End Duration: 8564 ms
+End Duration: 6844 ms
 start experiment for size file_40M.txt index 9
-End Duration: 8422 ms
+End Duration: 7072 ms
 start experiment for size file_40M.txt index 10
-End Duration: 8779 ms
-Avg time for file_40M.txt: 8566
+End Duration: 7029 ms
+Avg time for file_40M.txt: 7085

@@ -2,14 +2,17 @@ package client
 
 import (
 	"context"
-	"fmt"
 	"github.com/redis/go-redis/v9"
-	"polaris/truffle/pkg/common"
+)
+
+var (
+	// Pool - redis pool
+	Pool *redis.Client
 )
 
 var ctx = context.Background()
 
-func redisClient() *redis.Client {
+/*func redisClient() *redis.Client {
 	return redis.NewClient(&redis.Options{
 		Addr:     fmt.Sprintf("%s:6379", common.RedisIP),
 		Password: "", // no password set
@@ -17,8 +20,10 @@ func redisClient() *redis.Client {
 	})
 }
 
+*/
+
 func GetKeyKVS(key string) []byte {
-	val, err := redisClient().Get(ctx, key).Bytes()
+	val, err := Pool.Get(ctx, key).Bytes()
 	if err != nil {
 		panic(err)
 	}
@@ -26,7 +31,7 @@ func GetKeyKVS(key string) []byte {
 }
 
 func SetKeyKVS(key string, content []byte) {
-	err := redisClient().Set(ctx, key, content, 0).Err()
+	err := Pool.Set(ctx, key, content, 0).Err()
 	if err != nil {
 		panic(err)
 	}
