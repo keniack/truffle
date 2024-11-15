@@ -1,0 +1,77 @@
+start experiment for size video_1K.mp4 index 1
+End Duration: 4135 ms
+start experiment for size video_1K.mp4 index 2
+End Duration: 3593 ms
+start experiment for size video_1K.mp4 index 3
+End Duration: 3618 ms
+start experiment for size video_1K.mp4 index 4
+End Duration: 4069 ms
+start experiment for size video_1K.mp4 index 5
+End Duration: 3729 ms
+Avg time for video_1K.mp4: 3828
+start experiment for size video_1M.mp4 index 1
+End Duration: 4359 ms
+start experiment for size video_1M.mp4 index 2
+End Duration: 3894 ms
+start experiment for size video_1M.mp4 index 3
+End Duration: 4234 ms
+start experiment for size video_1M.mp4 index 4
+End Duration: 4131 ms
+start experiment for size video_1M.mp4 index 5
+End Duration: 3813 ms
+Avg time for video_1M.mp4: 4086
+start experiment for size video_2M.mp4 index 1
+End Duration: 4450 ms
+start experiment for size video_2M.mp4 index 2
+End Duration: 3902 ms
+start experiment for size video_2M.mp4 index 3
+End Duration: 4045 ms
+start experiment for size video_2M.mp4 index 4
+End Duration: 4468 ms
+start experiment for size video_2M.mp4 index 5
+End Duration: 3921 ms
+Avg time for video_2M.mp4: 4157
+start experiment for size video_4M.mp4 index 1
+End Duration: 4125 ms
+start experiment for size video_4M.mp4 index 2
+End Duration: 3764 ms
+start experiment for size video_4M.mp4 index 3
+End Duration: 3586 ms
+start experiment for size video_4M.mp4 index 4
+End Duration: 4417 ms
+start experiment for size video_4M.mp4 index 5
+End Duration: 3824 ms
+Avg time for video_4M.mp4: 3943
+start experiment for size video_10M.mp4 index 1
+End Duration: 4010 ms
+start experiment for size video_10M.mp4 index 2
+End Duration: 3728 ms
+start experiment for size video_10M.mp4 index 3
+End Duration: 3692 ms
+start experiment for size video_10M.mp4 index 4
+End Duration: 3720 ms
+start experiment for size video_10M.mp4 index 5
+End Duration: 3549 ms
+Avg time for video_10M.mp4: 3739
+start experiment for size video_20M.mp4 index 1
+End Duration: 3973 ms
+start experiment for size video_20M.mp4 index 2
+End Duration: 4052 ms
+start experiment for size video_20M.mp4 index 3
+End Duration: 4051 ms
+start experiment for size video_20M.mp4 index 4
+End Duration: 4561 ms
+start experiment for size video_20M.mp4 index 5
+End Duration: 3892 ms
+Avg time for video_20M.mp4: 4105
+start experiment for size video_40M.mp4 index 1
+End Duration: 4642 ms
+start experiment for size video_40M.mp4 index 2
+End Duration: 4625 ms
+start experiment for size video_40M.mp4 index 3
+End Duration: 4348 ms
+start experiment for size video_40M.mp4 index 4
+End Duration: 4321 ms
+start experiment for size video_40M.mp4 index 5
+End Duration: 4775 ms
+Avg time for video_40M.mp4: 4542

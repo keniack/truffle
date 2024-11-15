@@ -1,0 +1,140 @@
+Index 1
+2023/11/10 17:52:51 Average is 23 milliseconds
+2023/11/10 17:52:51 Average is 9 milliseconds
+2023/11/10 17:52:51 Average is 8 milliseconds
+2023/11/10 17:52:51 Average is 8 milliseconds
+2023/11/10 17:52:51 Average is 9 milliseconds
+2023/11/10 17:52:51 Final Average for 5 req repetitions is 11 milliseconds
+Index 25
+2023/11/10 17:48:16 Average is 83 milliseconds
+2023/11/10 17:48:16 Average is 80 milliseconds
+2023/11/10 17:48:16 Average is 107 milliseconds
+2023/11/10 17:48:16 Average is 106 milliseconds
+2023/11/10 17:48:16 Average is 78 milliseconds
+2023/11/10 17:48:16 Final Average for 5 req repetitions is 91 milliseconds
+Index 50
+2023/11/10 17:48:16 Average is 117 milliseconds
+2023/11/10 17:48:16 Average is 127 milliseconds
+2023/11/10 17:48:16 Average is 114 milliseconds
+2023/11/10 17:48:17 Average is 116 milliseconds
+2023/11/10 17:48:17 Average is 139 milliseconds
+2023/11/10 17:48:17 Final Average for 5 req repetitions is 123 milliseconds
+Index 75
+2023/11/10 17:48:17 Average is 149 milliseconds
+2023/11/10 17:48:17 Average is 163 milliseconds
+2023/11/10 17:48:18 Average is 246 milliseconds
+2023/11/10 17:48:18 Average is 268 milliseconds
+2023/11/10 17:48:18 Average is 168 milliseconds
+2023/11/10 17:48:18 Final Average for 5 req repetitions is 199 milliseconds
+Index 100
+2023/11/10 17:48:18 Average is 251 milliseconds
+2023/11/10 17:48:19 Average is 232 milliseconds
+2023/11/10 17:48:19 Average is 230 milliseconds
+2023/11/10 17:48:19 Average is 247 milliseconds
+2023/11/10 17:48:20 Average is 281 milliseconds
+2023/11/10 17:48:20 Final Average for 5 req repetitions is 248 milliseconds
+Index 125
+2023/11/10 17:48:20 Average is 411 milliseconds
+2023/11/10 17:48:21 Average is 394 milliseconds
+2023/11/10 17:48:21 Average is 345 milliseconds
+2023/11/10 17:48:22 Average is 288 milliseconds
+2023/11/10 17:48:22 Average is 273 milliseconds
+2023/11/10 17:48:22 Final Average for 5 req repetitions is 342 milliseconds
+Index 150
+2023/11/10 17:48:23 Average is 358 milliseconds
+2023/11/10 17:48:23 Average is 386 milliseconds
+2023/11/10 17:48:24 Average is 518 milliseconds
+2023/11/10 17:48:24 Average is 332 milliseconds
+2023/11/10 17:48:25 Average is 372 milliseconds
+2023/11/10 17:48:25 Final Average for 5 req repetitions is 393 milliseconds
+Index 175
+2023/11/10 17:48:25 Average is 368 milliseconds
+2023/11/10 17:48:26 Average is 373 milliseconds
+2023/11/10 17:48:26 Average is 426 milliseconds
+2023/11/10 17:48:27 Average is 580 milliseconds
+2023/11/10 17:48:28 Average is 393 milliseconds
+2023/11/10 17:48:28 Final Average for 5 req repetitions is 428 milliseconds
+Index 200
+2023/11/10 17:48:28 Average is 430 milliseconds
+2023/11/10 17:48:29 Average is 410 milliseconds
+2023/11/10 17:48:30 Average is 455 milliseconds
+2023/11/10 17:48:30 Average is 438 milliseconds
+2023/11/10 17:48:31 Average is 618 milliseconds
+2023/11/10 17:48:31 Final Average for 5 req repetitions is 470 milliseconds
+Index 225
+2023/11/10 17:48:32 Average is 572 milliseconds
+2023/11/10 17:48:33 Average is 481 milliseconds
+2023/11/10 17:48:33 Average is 441 milliseconds
+2023/11/10 17:48:34 Average is 475 milliseconds
+2023/11/10 17:48:35 Average is 509 milliseconds
+2023/11/10 17:48:35 Final Average for 5 req repetitions is 496 milliseconds
+Index 250
+2023/11/10 17:48:35 Average is 618 milliseconds
+2023/11/10 17:48:37 Average is 1005 milliseconds
+2023/11/10 17:48:37 Average is 607 milliseconds
+2023/11/10 17:48:38 Average is 529 milliseconds
+2023/11/10 17:48:39 Average is 495 milliseconds
+2023/11/10 17:48:39 Final Average for 5 req repetitions is 651 milliseconds
+Index 275
+2023/11/10 17:48:40 Average is 580 milliseconds
+2023/11/10 17:48:41 Average is 573 milliseconds
+2023/11/10 17:48:42 Average is 643 milliseconds
+2023/11/10 17:48:43 Average is 1095 milliseconds
+2023/11/10 17:48:44 Average is 554 milliseconds
+2023/11/10 17:48:44 Final Average for 5 req repetitions is 689 milliseconds
+Index 300
+2023/11/10 17:48:45 Average is 655 milliseconds
+2023/11/10 17:48:45 Average is 637 milliseconds
+2023/11/10 17:48:46 Average is 645 milliseconds
+2023/11/10 17:48:47 Average is 630 milliseconds
+2023/11/10 17:48:48 Average is 709 milliseconds
+2023/11/10 17:48:48 Final Average for 5 req repetitions is 655 milliseconds
+Index 325
+2023/11/10 17:48:50 Average is 1228 milliseconds
+2023/11/10 17:48:51 Average is 719 milliseconds
+2023/11/10 17:48:52 Average is 713 milliseconds
+2023/11/10 17:48:53 Average is 645 milliseconds
+2023/11/10 17:48:54 Average is 720 milliseconds
+2023/11/10 17:48:54 Final Average for 5 req repetitions is 805 milliseconds
+Index 350
+2023/11/10 17:48:55 Average is 740 milliseconds
+2023/11/10 17:48:56 Average is 768 milliseconds
+2023/11/10 17:48:57 Average is 774 milliseconds
+2023/11/10 17:48:59 Average is 1256 milliseconds
+2023/11/10 17:49:00 Average is 889 milliseconds
+2023/11/10 17:49:00 Final Average for 5 req repetitions is 885 milliseconds
+Index 375
+2023/11/10 17:49:01 Average is 727 milliseconds
+2023/11/10 17:49:02 Average is 838 milliseconds
+2023/11/10 17:49:03 Average is 851 milliseconds
+2023/11/10 17:49:05 Average is 851 milliseconds
+2023/11/10 17:49:06 Average is 801 milliseconds
+2023/11/10 17:49:06 Final Average for 5 req repetitions is 814 milliseconds
+Index 400
+2023/11/10 17:49:07 Average is 973 milliseconds
+2023/11/10 17:49:09 Average is 1395 milliseconds
+2023/11/10 17:49:11 Average is 1200 milliseconds
+2023/11/10 17:49:12 Average is 883 milliseconds
+2023/11/10 17:49:13 Average is 938 milliseconds
+2023/11/10 17:49:13 Final Average for 5 req repetitions is 1078 milliseconds
+Index 425
+2023/11/10 17:49:14 Average is 906 milliseconds
+2023/11/10 17:49:16 Average is 983 milliseconds
+2023/11/10 17:49:17 Average is 999 milliseconds
+2023/11/10 17:49:19 Average is 919 milliseconds
+2023/11/10 17:49:20 Average is 1010 milliseconds
+2023/11/10 17:49:20 Final Average for 5 req repetitions is 964 milliseconds
+Index 450
+2023/11/10 17:49:22 Average is 1540 milliseconds
+2023/11/10 17:49:24 Average is 1667 milliseconds
+2023/11/10 17:49:26 Average is 1320 milliseconds
+2023/11/10 17:49:28 Average is 1531 milliseconds
+2023/11/10 17:49:29 Average is 1178 milliseconds
+2023/11/10 17:49:29 Final Average for 5 req repetitions is 1447 milliseconds
+
+2023/11/10 17:52:11 Average is 1325 milliseconds
+2023/11/10 17:52:12 Average is 1098 milliseconds
+2023/11/10 17:52:14 Average is 1147 milliseconds
+2023/11/10 17:52:15 Average is 1117 milliseconds
+2023/11/10 17:52:17 Average is 1127 milliseconds
+2023/11/10 17:52:17 Final Average for 5 req repetitions is 1163 milliseconds

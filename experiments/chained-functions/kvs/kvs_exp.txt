@@ -1,0 +1,122 @@
+start experiment for size file_1K.txt
+End Duration: 2026 ms
+start experiment for size file_1K.txt
+End Duration: 2122 ms
+start experiment for size file_1K.txt
+End Duration: 2034 ms
+start experiment for size file_1K.txt
+End Duration: 2033 ms
+start experiment for size file_1K.txt
+End Duration: 2068 ms
+Avg time for file_1K.txt: 2056
+start experiment for size file_1M.txt
+End Duration: 2233 ms
+start experiment for size file_1M.txt
+End Duration: 2270 ms
+start experiment for size file_1M.txt
+End Duration: 2258 ms
+start experiment for size file_1M.txt
+End Duration: 2165 ms
+start experiment for size file_1M.txt
+End Duration: 2181 ms
+Avg time for file_1M.txt: 2221
+start experiment for size file_2M.txt
+End Duration: 2516 ms
+start experiment for size file_2M.txt
+End Duration: 2392 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4210 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4082 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4321 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4256 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4121 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4043 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4057 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4071 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4167 ms
+start experiment for size file_1K.txt
+fooEnd Duration: 4019 ms
+Avg time for file_1K.txt: 4134
+start experiment for size file_1M.txt
+fooEnd Duration: 4264 ms
+start experiment for size file_1M.txt
+fooEnd Duration: 4205 ms
+start experiment for size file_1M.txt
+fooEnd Duration: 4323 ms
+start experiment for size file_1M.txt
+fooEnd Duration: 4254 ms
+start experiment for size file_1M.txt
+fooEnd Duration: 4398 ms
+start experiment for size file_1M.txt
+fooEnd Duration: 4548 ms
+start experiment for size file_1M.txt
+fooEnd Duration: 4315 ms
+start experiment for size file_1M.txt
+fooEnd Duration: 4442 ms
+start experiment for size file_1M.txt
+fooEnd Duration: 4233 ms
+start experiment for size file_1M.txt
+fooEnd Duration: 4377 ms
+start experiment for size file_2M.txt
+End Duration: 2366 ms
+start experiment for size file_2M.txt
+End Duration: 2343 ms
+start experiment for size file_2M.txt
+End Duration: 2320 ms
+start experiment for size file_2M.txt
+End Duration: 2290 ms
+start experiment for size file_2M.txt
+End Duration: 2535 ms
+Avg time for file_2M.txt: 2370
+start experiment for size file_4M.txt
+End Duration: 2668 ms
+start experiment for size file_4M.txt
+End Duration: 2773 ms
+start experiment for size file_4M.txt
+End Duration: 2664 ms
+start experiment for size file_4M.txt
+End Duration: 2722 ms
+start experiment for size file_4M.txt
+End Duration: 2655 ms
+Avg time for file_4M.txt: 2696
+start experiment for size file_10M.txt
+End Duration: 3703 ms
+start experiment for size file_10M.txt
+End Duration: 3570 ms
+start experiment for size file_10M.txt
+End Duration: 3573 ms
+start experiment for size file_10M.txt
+End Duration: 3869 ms
+start experiment for size file_10M.txt
+End Duration: 3565 ms
+Avg time for file_10M.txt: 3656
+start experiment for size file_20M.txt
+End Duration: 5035 ms
+start experiment for size file_20M.txt
+End Duration: 5287 ms
+start experiment for size file_20M.txt
+End Duration: 4917 ms
+start experiment for size file_20M.txt
+End Duration: 4993 ms
+start experiment for size file_20M.txt
+End Duration: 5040 ms
+Avg time for file_20M.txt: 5054
+start experiment for size file_40M.txt
+End Duration: 9398 ms
+start experiment for size file_40M.txt
+End Duration: 9479 ms
+start experiment for size file_40M.txt
+End Duration: 9517 ms
+start experiment for size file_40M.txt
+End Duration: 9519 ms
+start experiment for size file_40M.txt
+End Duration: 9471 ms
+Avg time for file_40M.txt: 9476

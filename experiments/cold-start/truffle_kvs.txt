@@ -1,0 +1,206 @@
+Cold start 4s
+start experiment for size file_100M.txt index 1
+End Duration: 17058 ms
+start experiment for size file_100M.txt index 2
+End Duration: 16710 ms
+start experiment for size file_100M.txt index 3
+End Duration: 16734 ms
+start experiment for size file_100M.txt index 4
+End Duration: 16679 ms
+start experiment for size file_100M.txt index 5
+End Duration: 16977 ms
+Avg time for file_100M.txt: 16831
+Cold start 6s
+start experiment for size file_100M.txt index 1
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-65b989bf44-fmbqd" force deleted
+16991
+End Duration: 16991 ms
+start experiment for size file_100M.txt index 2
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-65b989bf44-tqflc" force deleted
+16613
+End Duration: 16613 ms
+start experiment for size file_100M.txt index 3
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-65b989bf44-nwk6n" force deleted
+16711
+End Duration: 16711 ms
+start experiment for size file_100M.txt index 4
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-65b989bf44-56296" force deleted
+16656
+End Duration: 16656 ms
+start experiment for size file_100M.txt index 5
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-65b989bf44-89lz7" force deleted
+16824
+End Duration: 16824 ms
+Avg time for file_100M.txt: 16759
+cold start 8s
+start experiment for size file_100M.txt index 1
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-6f578754c6-vx76m" force deleted
+16822
+End Duration: 16822 ms
+start experiment for size file_100M.txt index 2
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-6f578754c6-pxmlx" force deleted
+16651
+End Duration: 16651 ms
+start experiment for size file_100M.txt index 3
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-6f578754c6-2wsf9" force deleted
+16637
+End Duration: 16637 ms
+start experiment for size file_100M.txt index 4
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-6f578754c6-n557h" force deleted
+16653
+End Duration: 16653 ms
+start experiment for size file_100M.txt index 5
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-6f578754c6-54cmr" force deleted
+16756
+End Duration: 16756 ms
+Avg time for file_100M.txt: 16703
+8s
+start experiment for size file_100M.txt index 1
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-84fdd56b46-nkjgn" force deleted
+16634
+End Duration: 16634 ms
+start experiment for size file_100M.txt index 2
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-84fdd56b46-fs2fk" force deleted
+16876
+End Duration: 16876 ms
+start experiment for size file_100M.txt index 3
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-84fdd56b46-2b7vd" force deleted
+16595
+End Duration: 16595 ms
+start experiment for size file_100M.txt index 4
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-84fdd56b46-stxpb" force deleted
+16607
+End Duration: 16607 ms
+start experiment for size file_100M.txt index 5
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-84fdd56b46-mv6vv" force deleted
+16607
+End Duration: 16607 ms
+Avg time for file_100M.txt: 16663
+10s
+start experiment for size file_100M.txt index 1
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7664cb688b-m6d67" force deleted
+16822
+End Duration: 16822 ms
+start experiment for size file_100M.txt index 2
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7664cb688b-mvdlv" force deleted
+16649
+End Duration: 16649 ms
+start experiment for size file_100M.txt index 3
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7664cb688b-qzzfg" force deleted
+16746
+End Duration: 16746 ms
+start experiment for size file_100M.txt index 4
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7664cb688b-hjc8z" force deleted
+16780
+End Duration: 16780 ms
+start experiment for size file_100M.txt index 5
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7664cb688b-sqp2j" force deleted
+16610
+End Duration: 16610 ms
+Avg time for file_100M.txt: 16721
+
+
+10069
+End Duration: 10069 ms
+start experiment for size file_200M.txt index 2
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-77c7577cf-jkcb8" force deleted
+10086
+End Duration: 10086 ms
+start experiment for size file_200M.txt index 3
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-77c7577cf-pqhh5" force deleted
+10276
+End Duration: 10276 ms
+start experiment for size file_200M.txt index 4
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-77c7577cf-bv6lf" force deleted
+10303
+End Duration: 10303 ms
+start experiment for size file_200M.txt index 5
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-77c7577cf-kvcgv" force deleted
+10171
+End Duration: 10171 ms
+Avg time for file_200M.txt: 10181
+
+
+start experiment for size file_200M.txt index 1
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7b8ffd5d7b-2pkbk" force deleted
+7931
+End Duration: 7931 ms
+start experiment for size file_200M.txt index 2
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7b8ffd5d7b-cbkxh" force deleted
+7990
+End Duration: 7990 ms
+start experiment for size file_200M.txt index 3
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7b8ffd5d7b-m9vjb" force deleted
+8173
+End Duration: 8173 ms
+start experiment for size file_200M.txt index 4
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7b8ffd5d7b-48srd" force deleted
+8290
+End Duration: 8290 ms
+start experiment for size file_200M.txt index 5
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-7b8ffd5d7b-m9v5k" force deleted
+8194
+End Duration: 8194 ms
+Avg time for file_200M.txt: 8115
+
+start experiment for size file_200M.txt index 1
+error: error executing jsonpath "{.items[0].metadata.name}": Error executing template: array index out of bounds: index 0, length 0. Printing more information for debugging the template:
+	template was:
+		{.items[0].metadata.name}
+	object given to jsonpath engine was:
+		map[string]interface {}{"apiVersion":"v1", "items":[]interface {}{}, "kind":"List", "metadata":map[string]interface {}{"resourceVersion":""}}
+
+
+error: resource(s) were provided, but no name was specified
+5947
+End Duration: 5947 ms
+start experiment for size file_200M.txt index 2
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-5994877cf9-rpwtd" force deleted
+6614
+End Duration: 6614 ms
+start experiment for size file_200M.txt index 3
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-5994877cf9-65mwj" force deleted
+6446
+End Duration: 6446 ms
+start experiment for size file_200M.txt index 4
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-5994877cf9-gqnsj" force deleted
+6621
+End Duration: 6621 ms
+start experiment for size file_200M.txt index 5
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "func-b-cold-00001-deployment-5994877cf9-f75k8" force deleted
+6445
+End Duration: 6445 ms
+Avg time for file_200M.txt: 6414

@@ -1,0 +1,141 @@
+
+Index 25
+2023/11/10 17:32:50 Average is 8.294625 req per sec
+2023/11/10 17:32:50 Average is 7.467145 req per sec
+2023/11/10 17:32:51 Average is 9.686168 req per sec
+2023/11/10 17:32:51 Average is 13.542795 req per sec
+2023/11/10 17:32:51 Average is 11.140820 req per sec
+2023/11/10 17:32:51 Final Average for 5 req repetitions is 10.026311 req/sec
+Index 50
+2023/11/10 17:32:51 Average is 6.337939 req per sec
+2023/11/10 17:32:51 Average is 6.636581 req per sec
+2023/11/10 17:32:51 Average is 6.843690 req per sec
+2023/11/10 17:32:52 Average is 6.875688 req per sec
+2023/11/10 17:32:52 Average is 8.758101 req per sec
+2023/11/10 17:32:52 Final Average for 5 req repetitions is 7.090400 req/sec
+Index 75
+2023/11/10 17:32:52 Average is 4.577916 req per sec
+2023/11/10 17:32:52 Average is 3.889638 req per sec
+2023/11/10 17:32:53 Average is 4.794170 req per sec
+2023/11/10 17:32:53 Average is 4.950168 req per sec
+2023/11/10 17:32:53 Average is 5.672793 req per sec
+2023/11/10 17:32:53 Final Average for 5 req repetitions is 4.776937 req/sec
+Index 100
+2023/11/10 17:32:53 Average is 3.461885 req per sec
+2023/11/10 17:32:54 Average is 3.995206 req per sec
+2023/11/10 17:32:54 Average is 3.975353 req per sec
+2023/11/10 17:32:55 Average is 3.421260 req per sec
+2023/11/10 17:32:55 Average is 4.444444 req per sec
+2023/11/10 17:32:55 Final Average for 5 req repetitions is 3.859629 req/sec
+Index 125
+2023/11/10 17:32:55 Average is 2.740086 req per sec
+2023/11/10 17:32:56 Average is 3.371362 req per sec
+2023/11/10 17:32:56 Average is 2.789992 req per sec
+2023/11/10 17:32:57 Average is 3.671827 req per sec
+2023/11/10 17:32:57 Average is 3.260473 req per sec
+2023/11/10 17:32:57 Final Average for 5 req repetitions is 3.166748 req/sec
+Index 150
+2023/11/10 17:32:58 Average is 2.474635 req per sec
+2023/11/10 17:32:58 Average is 3.039206 req per sec
+2023/11/10 17:32:59 Average is 2.544270 req per sec
+2023/11/10 17:32:59 Average is 2.561257 req per sec
+2023/11/10 17:33:00 Average is 2.724796 req per sec
+2023/11/10 17:33:00 Final Average for 5 req repetitions is 2.668833 req/sec
+Index 175
+2023/11/10 17:33:00 Average is 2.472939 req per sec
+2023/11/10 17:33:01 Average is 2.322957 req per sec
+2023/11/10 17:33:01 Average is 2.120775 req per sec
+2023/11/10 17:33:02 Average is 2.964343 req per sec
+2023/11/10 17:33:02 Average is 2.439772 req per sec
+2023/11/10 17:33:02 Final Average for 5 req repetitions is 2.464157 req/sec
+Index 200
+2023/11/10 17:33:03 Average is 2.346977 req per sec
+2023/11/10 17:33:04 Average is 2.144151 req per sec
+2023/11/10 17:33:04 Average is 2.293394 req per sec
+2023/11/10 17:33:05 Average is 2.392402 req per sec
+2023/11/10 17:33:06 Average is 1.713914 req per sec
+2023/11/10 17:33:06 Final Average for 5 req repetitions is 2.178168 req/sec
+Index 225
+2023/11/10 17:33:06 Average is 2.258537 req per sec
+2023/11/10 17:33:07 Average is 2.131348 req per sec
+2023/11/10 17:33:08 Average is 2.007280 req per sec
+2023/11/10 17:33:09 Average is 1.363876 req per sec
+2023/11/10 17:33:09 Average is 1.780923 req per sec
+2023/11/10 17:33:09 Final Average for 5 req repetitions is 1.908393 req/sec
+Index 250
+2023/11/10 17:33:10 Average is 1.860008 req per sec
+2023/11/10 17:33:11 Average is 1.732490 req per sec
+2023/11/10 17:33:12 Average is 1.654512 req per sec
+2023/11/10 17:33:13 Average is 1.442202 req per sec
+2023/11/10 17:33:14 Average is 1.859538 req per sec
+2023/11/10 17:33:14 Final Average for 5 req repetitions is 1.709750 req/sec
+Index 275
+2023/11/10 17:33:14 Average is 1.508445 req per sec
+2023/11/10 17:33:15 Average is 1.547805 req per sec
+2023/11/10 17:33:16 Average is 1.340267 req per sec
+2023/11/10 17:33:17 Average is 1.479736 req per sec
+2023/11/10 17:33:18 Average is 1.447833 req per sec
+2023/11/10 17:33:18 Final Average for 5 req repetitions is 1.464817 req/sec
+Index 300
+2023/11/10 17:33:19 Average is 1.577138 req per sec
+2023/11/10 17:33:20 Average is 1.264835 req per sec
+2023/11/10 17:33:21 Average is 1.460657 req per sec
+2023/11/10 17:33:22 Average is 0.888702 req per sec
+2023/11/10 17:33:23 Average is 1.636304 req per sec
+2023/11/10 17:33:23 Final Average for 5 req repetitions is 1.365527 req/sec
+Index 325
+2023/11/10 17:33:24 Average is 1.465694 req per sec
+2023/11/10 17:33:25 Average is 1.464512 req per sec
+2023/11/10 17:33:26 Average is 1.372078 req per sec
+2023/11/10 17:33:28 Average is 1.197106 req per sec
+2023/11/10 17:33:29 Average is 1.068696 req per sec
+2023/11/10 17:33:29 Final Average for 5 req repetitions is 1.313617 req/sec
+Index 350
+2023/11/10 17:33:30 Average is 1.277993 req per sec
+2023/11/10 17:33:31 Average is 1.234011 req per sec
+2023/11/10 17:33:32 Average is 1.391910 req per sec
+2023/11/10 17:33:33 Average is 1.314337 req per sec
+2023/11/10 17:33:34 Average is 1.273491 req per sec
+2023/11/10 17:33:34 Final Average for 5 req repetitions is 1.298348 req/sec
+Index 375
+2023/11/10 17:33:36 Average is 0.656459 req per sec
+2023/11/10 17:33:37 Average is 1.105546 req per sec
+2023/11/10 17:33:38 Average is 1.316811 req per sec
+2023/11/10 17:33:39 Average is 1.210400 req per sec
+2023/11/10 17:33:40 Average is 1.107740 req per sec
+2023/11/10 17:33:40 Final Average for 5 req repetitions is 1.079391 req/sec
+Index 400
+2023/11/10 17:33:42 Average is 1.274092 req per sec
+2023/11/10 17:33:43 Average is 1.077508 req per sec
+2023/11/10 17:33:45 Average is 0.689766 req per sec
+2023/11/10 17:33:46 Average is 0.859812 req per sec
+2023/11/10 17:33:47 Average is 1.174026 req per sec
+2023/11/10 17:33:47 Final Average for 5 req repetitions is 1.015041 req/sec
+Index 425
+2023/11/10 17:33:49 Average is 1.077321 req per sec
+2023/11/10 17:33:50 Average is 1.053657 req per sec
+2023/11/10 17:33:52 Average is 1.046337 req per sec
+2023/11/10 17:33:53 Average is 1.134041 req per sec
+2023/11/10 17:33:54 Average is 0.994178 req per sec
+2023/11/10 17:33:54 Final Average for 5 req repetitions is 1.061107 req/sec
+Index 450
+2023/11/10 17:33:56 Average is 0.668363 req per sec
+2023/11/10 17:33:58 Average is 0.709070 req per sec
+2023/11/10 17:33:59 Average is 0.970129 req per sec
+2023/11/10 17:34:01 Average is 0.979605 req per sec
+2023/11/10 17:34:02 Average is 1.142622 req per sec
+2023/11/10 17:34:02 Final Average for 5 req repetitions is 0.893958 req/sec
+Index 475
+2023/11/10 17:34:04 Average is 0.984823 req per sec
+2023/11/10 17:34:05 Average is 1.017163 req per sec
+2023/11/10 17:34:06 Average is 0.959658 req per sec
+2023/11/10 17:34:08 Average is 0.844697 req per sec
+2023/11/10 17:34:10 Average is 0.559147 req per sec
+2023/11/10 17:34:10 Final Average for 5 req repetitions is 0.873098 req/sec
+Index 500
+2023/11/10 17:34:12 Average is 0.651096 req per sec
+2023/11/10 17:34:14 Average is 0.888676 req per sec
+2023/11/10 17:34:16 Average is 0.608067 req per sec
+2023/11/10 17:34:18 Average is 0.968576 req per sec
+2023/11/10 17:34:19 Average is 0.920487 req per sec
+2023/11/10 17:34:19 Final Average for 5 req repetitions is 0.807380 req/sec

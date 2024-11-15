@@ -9,6 +9,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"polaris/truffle/pkg/common"
 )
 
 func StartPodMetrics() {
@@ -44,19 +45,23 @@ func StartPodMetrics() {
 		log.Fatal(err)
 	}
 	ch := watcher.ResultChan()
-
-	log.Printf("--- POD Watch (namespace %v) ----\n", "")
+	if common.Debug {
+		common.DebugLog.Printf("--- POD Watch (namespace %v) ----\n", "")
+	}
 	for event := range ch {
 		pod, ok := event.Object.(*v1.Pod)
 		if !ok {
-			log.Fatal("unexpected type")
+			common.DebugLog.Fatal("unexpected type")
 		}
-		log.Printf("Event [%s] PodName [%s] Status [%s] NodeName [%s] HostIP [%s] PodIp [%s]\n",
-			event.Type, pod.ObjectMeta.Name, pod.Status.Phase, pod.Spec.NodeName, pod.Status.HostIP, pod.Status.PodIPs)
+		if common.Debug {
+			common.DebugLog.Printf("Event [%s] PodName [%s] Status [%s] NodeName [%s] HostIP [%s] PodIp [%s]\n",
+				event.Type, pod.ObjectMeta.Name, pod.Status.Phase, pod.Spec.NodeName, pod.Status.HostIP, pod.Status.PodIPs)
+		}
 
 		var podMetric, _ = NewPodMetrics(pod, string(event.Type), string(pod.Status.Phase))
-
-		log.Printf("%s SchedulingTime %dms, PrepTime %dms, Running Time %dms\n",
-			podMetric.PodName, podMetric.GetSchedulingTime(), podMetric.GetPrepTime(), podMetric.GetRunningTime())
+		if common.Debug {
+			common.DebugLog.Printf("%s SchedulingTime %dms, PrepTime %dms, Running Time %dms\n",
+				podMetric.PodName, podMetric.GetSchedulingTime(), podMetric.GetPrepTime(), podMetric.GetRunningTime())
+		}
 	}
 }

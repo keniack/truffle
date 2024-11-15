@@ -33,7 +33,7 @@ func init() {
 	flag.StringVar(&common.IncomingPodPort, "incoming-port", "8080", "pod incoming port")
 	flag.StringVar(&common.AwsAccessKey, "access-key", "", "AWS access key")
 	flag.StringVar(&common.AwsSecretKey, "secret-key", "", "AWS secret key")
-	flag.StringVar(&common.ComMode, "comm-mode", "BUFFER", "Communication mode: BUFFER S3 KVS")
+	flag.StringVar(&common.ComMode, "comm-mode", "TRUFFLE", "Communication mode: TRUFFLE S3 KVS")
 	flag.StringVar(&common.RedisIP, "redis-ip", "localhost", "Redis IP")
 	flag.StringVar(&common.RedisPwd, "redis-pwd", "", "Redis Password")
 	flag.BoolVar(&incomingProxy, "incoming-proxy", false, "Use reverse proxy for incoming requests")

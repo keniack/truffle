@@ -18,10 +18,12 @@ func OutgoingHandler() func(http.ResponseWriter, *http.Request) {
 			common.DebugLog.Printf("outgoing started")
 		}
 		target := r.Header.Get("x-target")
+		sourceTime := r.Header.Get("x-source-time")
 		contentLengthStr := r.Header.Get("Content-Length")
 		contentLength, _ := strconv.Atoi(contentLengthStr)
 		if common.Debug {
 			common.DebugLog.Printf("outgoing target %s", target)
+			common.DebugLog.Printf("outgoing time %s", sourceTime)
 			common.DebugLog.Printf("Comm Mode %s outgoing content length %s", common.ComMode, contentLengthStr)
 		}
 		var nodeIpChannel = make(chan string, 1)
@@ -44,12 +46,9 @@ func OutgoingHandler() func(http.ResponseWriter, *http.Request) {
 			common.DebugLog.Printf("url %s", url)
 		}
 		proxyReq, _ := http.NewRequest(r.Method, url, bytes.NewReader(buf.Bytes()))
-		proxyReq.Header.Add("Content-Type", "application/json")
-		proxyReq.Header.Add("x-target", target)
-		client := GetHttpClient()
-		resp, err := client.Do(proxyReq)
-		//respBody, _ := io.ReadAll(resp.Body)
-		//log.Printf("outgoing finished. response OK %s", string(respBody))
+		proxyReq.Header = r.Header
+		httpclient := GetHttpClient()
+		resp, err := httpclient.Do(proxyReq)
 		_, err = io.Copy(w, resp.Body)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusBadGateway)
@@ -71,15 +70,25 @@ func IncomingHandler() func(http.ResponseWriter, *http.Request) {
 			common.DebugLog.Printf("incoming started")
 		}
 		target := r.Header.Get("x-target")
+		contentLengthStr := r.Header.Get("Content-Length")
+		sourceTime := r.Header.Get("x-source-time")
+		contentLength, _ := strconv.Atoi(contentLengthStr)
+		if common.Debug {
+			common.DebugLog.Printf("incoming target %s", target)
+			common.DebugLog.Printf("incoming time %s", sourceTime)
+			common.DebugLog.Printf("Comm Mode %s incoming content length %s", common.ComMode, contentLengthStr)
+		}
 		var podIP string
 		var byteContent []byte
 
 		var wg sync.WaitGroup
 		wg.Add(2)
+
 		var contentChannel = make(chan []byte, 1)
 		var podIpChannel = make(chan string, 1)
-		go client.GetContentIncoming(r.Body, contentChannel, &wg)
+		go client.GetContentIncoming(r.Body, contentChannel, contentLength, &wg)
 		go watcher.GetPodIpForName(target, podIpChannel, &wg)
+
 		byteContent = <-contentChannel
 		podIP = <-podIpChannel
 		wg.Wait()
@@ -87,7 +96,6 @@ func IncomingHandler() func(http.ResponseWriter, *http.Request) {
 		close(contentChannel)
 		if common.Debug {
 			common.DebugLog.Printf("incoming target %s", target)
-			common.DebugLog.Printf("Comm Mode %s incoming content length %d", common.ComMode, len(byteContent))
 		}
 
 		url := fmt.Sprintf("http://%s:%s", podIP, common.IncomingPodPort)
@@ -96,11 +104,10 @@ func IncomingHandler() func(http.ResponseWriter, *http.Request) {
 
 		}
 		proxyReq, _ := http.NewRequest(r.Method, url, bytes.NewReader(byteContent))
-		proxyReq.Header.Add("Content-Type", "application/json")
-		proxyReq.Header.Add("x-target", target)
-		client := GetHttpClient()
+		proxyReq.Header = r.Header
+		httpClient := GetHttpClient()
 		for {
-			resp, err := client.Do(proxyReq)
+			resp, err := httpClient.Do(proxyReq)
 			if err != nil {
 				continue
 			}

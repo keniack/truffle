@@ -20,7 +20,9 @@ func GetHttpClient() http.Client {
 		KeepAlive: 30 * time.Second,
 	}
 	transport := &http.Transport{
-		DialContext: dialer.DialContext,
+		DialContext:        dialer.DialContext,
+		DisableKeepAlives:  true,
+		DisableCompression: true,
 	}
 	client := http.Client{
 		Transport: transport,

@@ -8,6 +8,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/clientcmd"
 	"log"
+	"net"
 	"os"
 	"path/filepath"
 	"polaris/truffle/pkg/common"
@@ -38,13 +39,24 @@ func GetPodIpForName(target string, podIpChannel chan<- string, wg *sync.WaitGro
 	// initial list
 	listOptions := metav1.ListOptions{LabelSelector: "", FieldSelector: ""}
 
+	config, err := clientcmd.BuildConfigFromFlags("", filepath.Join(os.Getenv("HOME"), ".kube", "config"))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	clientset, err := kubernetes.NewForConfig(config)
+	if err != nil {
+		log.Fatal(err)
+	}
 	// watch future changes to Pods
-	watcher, err := WatcherClient().CoreV1().Pods("default").Watch(ctx, listOptions)
+	watcher, err := clientset.CoreV1().Pods("default").Watch(ctx, listOptions)
 	if err != nil {
 		log.Fatal(err)
 	}
 	ch := watcher.ResultChan()
+
 out:
+
 	for event := range ch {
 		pod, _ := event.Object.(*v1.Pod)
 		if common.Trace {
@@ -59,7 +71,6 @@ out:
 				}
 				podIpChannel <- pod.Status.PodIP
 				break out
-
 			}
 		}
 	}
@@ -67,6 +78,20 @@ out:
 		common.DebugLog.Println("Finished watcher")
 	}
 
+}
+
+func IsTCPWorking(url string) bool {
+	conn, err := net.Dial("tcp", url)
+	if conn != nil {
+		err := conn.Close()
+		if err != nil {
+			return false
+		} // close if problem
+	}
+	if err != nil {
+		return false
+	}
+	return true
 }
 
 func GetNodeIpForName(target string, nodeIpChannel chan<- string, wg *sync.WaitGroup) {

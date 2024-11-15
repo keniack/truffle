@@ -1,0 +1,77 @@
+start experiment for size video_1K.mp4
+decodeEnd Duration: 5048 ms
+start experiment for size video_1K.mp4
+decodeEnd Duration: 5108 ms
+start experiment for size video_1K.mp4
+decodeEnd Duration: 5446 ms
+start experiment for size video_1K.mp4
+decodeEnd Duration: 4999 ms
+start experiment for size video_1K.mp4
+decodeEnd Duration: 4844 ms
+Avg time for video_1K.mp4: 5089
+start experiment for size video_1M.mp4
+decodeEnd Duration: 5432 ms
+start experiment for size video_1M.mp4
+decodeEnd Duration: 5412 ms
+start experiment for size video_1M.mp4
+decodeEnd Duration: 5956 ms
+start experiment for size video_1M.mp4
+decodeEnd Duration: 5764 ms
+start experiment for size video_1M.mp4
+decodeEnd Duration: 5278 ms
+Avg time for video_1M.mp4: 5568
+start experiment for size video_2M.mp4
+decodeEnd Duration: 5848 ms
+start experiment for size video_2M.mp4
+decodeEnd Duration: 5945 ms
+start experiment for size video_2M.mp4
+decodeEnd Duration: 5543 ms
+start experiment for size video_2M.mp4
+decodeEnd Duration: 5238 ms
+start experiment for size video_2M.mp4
+decodeEnd Duration: 5111 ms
+Avg time for video_2M.mp4: 5537
+start experiment for size video_4M.mp4
+decodeEnd Duration: 5795 ms
+start experiment for size video_4M.mp4
+decodeEnd Duration: 5788 ms
+start experiment for size video_4M.mp4
+decodeEnd Duration: 5229 ms
+start experiment for size video_4M.mp4
+decodeEnd Duration: 5883 ms
+start experiment for size video_4M.mp4
+decodeEnd Duration: 6152 ms
+Avg time for video_4M.mp4: 5769
+start experiment for size video_10M.mp4
+decodeEnd Duration: 6132 ms
+start experiment for size video_10M.mp4
+decodeEnd Duration: 5922 ms
+start experiment for size video_10M.mp4
+decodeEnd Duration: 5655 ms
+start experiment for size video_10M.mp4
+decodeEnd Duration: 5884 ms
+start experiment for size video_10M.mp4
+decodeEnd Duration: 6224 ms
+Avg time for video_10M.mp4: 5963
+start experiment for size video_20M.mp4
+decodeEnd Duration: 6124 ms
+start experiment for size video_20M.mp4
+decodeEnd Duration: 5906 ms
+start experiment for size video_20M.mp4
+decodeEnd Duration: 6446 ms
+start experiment for size video_20M.mp4
+decodeEnd Duration: 6112 ms
+start experiment for size video_20M.mp4
+decodeEnd Duration: 6289 ms
+Avg time for video_20M.mp4: 6175
+start experiment for size video_40M.mp4
+decodeEnd Duration: 7887 ms
+start experiment for size video_40M.mp4
+decodeEnd Duration: 6786 ms
+start experiment for size video_40M.mp4
+decodeEnd Duration: 7770 ms
+start experiment for size video_40M.mp4
+decodeEnd Duration: 7047 ms
+start experiment for size video_40M.mp4
+decodeEnd Duration: 8193 ms
+Avg time for video_40M.mp4: 7536

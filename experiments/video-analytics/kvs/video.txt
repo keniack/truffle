@@ -1,0 +1,55 @@
+start experiment for size video_2M.mp4
+decoder-frame-1.jpgEnd Duration: 4743 ms
+start experiment for size video_2M.mp4
+decoder-frame-1.jpgEnd Duration: 4553 ms
+start experiment for size video_2M.mp4
+decoder-frame-1.jpgEnd Duration: 3972 ms
+start experiment for size video_2M.mp4
+decoder-frame-1.jpgEnd Duration: 4695 ms
+start experiment for size video_2M.mp4
+decoder-frame-1.jpgEnd Duration: 3914 ms
+Avg time for video_2M.mp4: 4375
+start experiment for size video_4M.mp4
+decoder-frame-1.jpgEnd Duration: 4228 ms
+start experiment for size video_4M.mp4
+decoder-frame-1.jpgEnd Duration: 4252 ms
+start experiment for size video_4M.mp4
+decoder-frame-1.jpgEnd Duration: 4580 ms
+start experiment for size video_4M.mp4
+decoder-frame-1.jpgEnd Duration: 4365 ms
+start experiment for size video_4M.mp4
+decoder-frame-1.jpgEnd Duration: 4899 ms
+Avg time for video_4M.mp4: 4464
+start experiment for size video_10M.mp4
+decoder-frame-1.jpgEnd Duration: 5100 ms
+start experiment for size video_10M.mp4
+decoder-frame-1.jpgEnd Duration: 5017 ms
+start experiment for size video_10M.mp4
+decoder-frame-1.jpgEnd Duration: 5624 ms
+start experiment for size video_10M.mp4
+decoder-frame-1.jpgEnd Duration: 5139 ms
+start experiment for size video_10M.mp4
+decoder-frame-1.jpgEnd Duration: 5230 ms
+Avg time for video_10M.mp4: 5222
+start experiment for size video_20M.mp4
+decoder-frame-1.jpgEnd Duration: 6563 ms
+start experiment for size video_20M.mp4
+decoder-frame-1.jpgEnd Duration: 6715 ms
+start experiment for size video_20M.mp4
+decoder-frame-1.jpgEnd Duration: 7364 ms
+start experiment for size video_20M.mp4
+decoder-frame-1.jpgEnd Duration: 7258 ms
+start experiment for size video_20M.mp4
+decoder-frame-1.jpgEnd Duration: 6960 ms
+Avg time for video_20M.mp4: 6972
+start experiment for size video_40M.mp4
+decoder-frame-1.jpgEnd Duration: 10001 ms
+start experiment for size video_40M.mp4
+decoder-frame-1.jpgEnd Duration: 10570 ms
+start experiment for size video_40M.mp4
+decoder-frame-1.jpgEnd Duration: 10412 ms
+start experiment for size video_40M.mp4
+decoder-frame-1.jpgEnd Duration: 10533 ms
+start experiment for size video_40M.mp4
+decoder-frame-1.jpgEnd Duration: 10063 ms
+Avg time for video_40M.mp4: 10315

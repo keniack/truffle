@@ -1,0 +1,86 @@
+2s
+start experiment for size file_100M.txt
+End Duration: 8260 ms
+start experiment for size file_100M.txt
+End Duration: 9384 ms
+start experiment for size file_100M.txt
+End Duration: 8693 ms
+start experiment for size file_100M.txt
+End Duration: 8317 ms
+start experiment for size file_100M.txt
+End Duration: 8156 ms
+Avg time for file_100M.txt: 8562
+4s
+start experiment for size file_100M.txt
+End Duration: 10469 ms
+start experiment for size file_100M.txt
+End Duration: 10354 ms
+start experiment for size file_100M.txt
+End Duration: 11017 ms
+start experiment for size file_100M.txt
+End Duration: 10404 ms
+start experiment for size file_100M.txt
+End Duration: 10704 ms
+Avg time for file_100M.txt: 10589
+6s
+start experiment for size file_100M.txt
+End Duration: 12804 ms
+start experiment for size file_100M.txt
+End Duration: 12216 ms
+start experiment for size file_100M.txt
+End Duration: 13008 ms
+start experiment for size file_100M.txt
+End Duration: 11771 ms
+start experiment for size file_100M.txt
+End Duration: 13017 ms
+Avg time for file_100M.txt: 12563
+8s
+start experiment for size file_100M.txt
+End Duration: 14089 ms
+start experiment for size file_100M.txt
+End Duration: 14268 ms
+start experiment for size file_100M.txt
+End Duration: 14273 ms
+start experiment for size file_100M.txt
+End Duration: 14569 ms
+start experiment for size file_100M.txt
+End Duration: 15119 ms
+Avg time for file_100M.txt: 14463
+10s
+start experiment for size file_100M.txt
+End Duration: 16700 ms
+start experiment for size file_100M.txt
+End Duration: 17604 ms
+start experiment for size file_100M.txt
+End Duration: 16547 ms
+start experiment for size file_100M.txt
+End Duration: 17334 ms
+start experiment for size file_100M.txt
+End Duration: 17692 ms
+Avg time for file_100M.txt: 17175
+
+
+
+start experiment for size file_200M.txt
+End Duration: 16867 ms
+start experiment for size file_200M.txt
+End Duration: 18002 ms
+start experiment for size file_200M.txt
+End Duration: 17639 ms
+start experiment for size file_200M.txt
+End Duration: 17517 ms
+start experiment for size file_200M.txt
+End Duration: 17313 ms
+Avg time for file_200M.txt: 17467
+
+start experiment for size file_200M.txt
+End Duration: 15312 ms
+start experiment for size file_200M.txt
+End Duration: 16409 ms
+start experiment for size file_200M.txt
+End Duration: 18361 ms
+start experiment for size file_200M.txt
+End Duration: 15735 ms
+start experiment for size file_200M.txt
+End Duration: 15235 ms
+Avg time for file_200M.txt: 16210

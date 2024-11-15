@@ -1,0 +1,174 @@
+start experiment for size file_1K.txt
+End Duration: 2930 ms
+start experiment for size file_1K.txt
+End Duration: 2894 ms
+start experiment for size file_1K.txt
+End Duration: 2865 ms
+start experiment for size file_1K.txt
+End Duration: 2863 ms
+start experiment for size file_1K.txt
+End Duration: 2917 ms
+Avg time for file_1K.txt: 2893
+start experiment for size file_1M.txt
+End Duration: 3168 ms
+start experiment for size file_1M.txt
+End Duration: 3176 ms
+start experiment for size file_1M.txt
+End Duration: 3201 ms
+start experiment for size file_1M.txt
+End Duration: 3101 ms
+start experiment for size file_1M.txt
+End Duration: 3235 ms
+Avg time for file_1M.txt: 3176
+start experiment for size file_2M.txt
+End Duration: 3388 ms
+start experiment for size file_2M.txt
+End Duration: 3164 ms
+start experiment for size file_2M.txt
+End Duration: 3170 ms
+start experiment for size file_2M.txt
+End Duration: 3290 ms
+start experiment for size file_2M.txt
+End Duration: 3206 ms
+Avg time for file_2M.txt: 3243
+start experiment for size file_4M.txt
+End Duration: 3368 ms
+start experiment for size file_4M.txt
+End Duration: 3344 ms
+start experiment for size file_4M.txt
+End Duration: 3444 ms
+start experiment for size file_4M.txt
+End Duration: 3386 ms
+start experiment for size file_4M.txt
+End Duration: 3406 ms
+Avg time for file_4M.txt: 3389
+start experiment for size file_10M.txt
+End Duration: 4082 ms
+start experiment for size file_10M.txt
+End Duration: 3933 ms
+start experiment for size file_10M.txt
+End Duration: 4027 ms
+start experiment for size file_10M.txt
+End Duration: 3889 ms
+start experiment for size file_10M.txt
+End Duration: 4221 ms
+Avg time for file_10M.txt: 4030
+start experiment for size file_20M.txt
+End Duration: 4484 ms
+start experiment for size file_20M.txt
+End Duration: 4301 ms
+start experiment for size file_20M.txt
+End Duration: 4413 ms
+start experiment for size file_20M.txt
+End Duration: 4362 ms
+start experiment for size file_20M.txt
+End Duration: 4349 ms
+Avg time for file_20M.txt: 4381
+start experiment for size file_40M.txt
+End Duration: 5991 ms
+start experiment for size file_40M.txt
+End Duration: 5890 ms
+	start experiment for size file_40M.txt
+End Duration: 6334 ms
+start experiment for size file_40M.txt
+End Duration: 6431 ms
+start experiment for size file_40M.txt
+End Duration: 6256 ms
+Avg time for file_40M.txt: 6180
+
+
+start experiment for size file_1M.txt
+error: error executing jsonpath "{.items[0].metadata.name}": Error executing template: array index out of bounds: index 0, length 0. Printing more information for debugging the template:
+	template was:
+		{.items[0].metadata.name}
+	object given to jsonpath engine was:
+		map[string]interface {}{"apiVersion":"v1", "items":[]interface {}{}, "kind":"List", "metadata":map[string]interface {}{"resourceVersion":""}}
+
+
+End Duration: 3394 ms
+start experiment for size file_1M.txt
+End Duration: 2456 ms
+start experiment for size file_1M.txt
+End Duration: 2613 ms
+start experiment for size file_1M.txt
+End Duration: 2773 ms
+start experiment for size file_1M.txt
+End Duration: 2319 ms
+Avg time for file_1M.txt: 2711
+start experiment for size file_2M.txt
+End Duration: 3711 ms
+start experiment for size file_2M.txt
+End Duration: 3371 ms
+start experiment for size file_2M.txt
+End Duration: 2376 ms
+start experiment for size file_2M.txt
+End Duration: 2269 ms
+start experiment for size file_2M.txt
+End Duration: 3432 ms
+Avg time for file_2M.txt: 3031
+start experiment for size file_4M.txt
+End Duration: 2647 ms
+start experiment for size file_4M.txt
+End Duration: 3966 ms
+start experiment for size file_4M.txt
+End Duration: 2587 ms
+start experiment for size file_4M.txt
+End Duration: 3626 ms
+start experiment for size file_4M.txt
+End Duration: 3172 ms
+Avg time for file_4M.txt: 3199
+start experiment for size file_8M.txt
+End Duration: 3046 ms
+start experiment for size file_8M.txt
+End Duration: 2630 ms
+start experiment for size file_8M.txt
+End Duration: 3998 ms
+start experiment for size file_8M.txt
+End Duration: 3233 ms
+start experiment for size file_8M.txt
+End Duration: 3624 ms
+Avg time for file_8M.txt: 3306
+start experiment for size file_16M.txt
+End Duration: 3019 ms
+start experiment for size file_16M.txt
+End Duration: 3377 ms
+start experiment for size file_16M.txt
+End Duration: 3607 ms
+start experiment for size file_16M.txt
+End Duration: 3028 ms
+start experiment for size file_16M.txt
+End Duration: 3392 ms
+Avg time for file_16M.txt: 3284
+start experiment for size file_32M.txt
+End Duration: 4053 ms
+start experiment for size file_32M.txt
+End Duration: 4109 ms
+start experiment for size file_32M.txt
+End Duration: 5475 ms
+start experiment for size file_32M.txt
+End Duration: 4094 ms
+start experiment for size file_32M.txt
+End Duration: 4300 ms
+Avg time for file_32M.txt: 4406
+start experiment for size file_64M.txt
+End Duration: 5205 ms
+start experiment for size file_64M.txt
+End Duration: 4874 ms
+start experiment for size file_64M.txt
+End Duration: 4722 ms
+start experiment for size file_64M.txt
+End Duration: 5545 ms
+start experiment for size file_64M.txt
+End Duration: 5582 ms
+Avg time for file_64M.txt: 5185
+start experiment for size file_128M.txt
+End Duration: 7910 ms
+start experiment for size file_128M.txt
+End Duration: 7335 ms
+start experiment for size file_128M.txt
+End Duration: 7350 ms
+start experiment for size file_128M.txt
+	End Duration: 8135 ms
+start experiment for size file_128M.txt
+End Duration: 7070 ms
+Avg time for file_128M.txt: 7560
